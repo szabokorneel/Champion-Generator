@@ -4,5 +4,12 @@ A név árulkodó, hiszen ez egy játék, melynek során a felhasználó az ált
 Ami nem más, mint a bajnokká válás. Persze ez az út nem egyszerű, hiszen a szerencse kezébe adja csapatának sorsát, így bármi megtörténhet.
 
 Kód tartalmaz: -> egy menüt, ami a navigálásban segít
-               -> opcíot csapata nevének beírására
-               
+               -> opciót csapata nevének beírására
+
+functions.py-ban -> csapat választása, menü
+
+main.py -> menüpontok definiálása(pl.: 1:Játék indítása, stb.)
+
+data.py -> csapatok listát tartalmazza
+
+csapatok csv. -> a csapatokat tárolja
