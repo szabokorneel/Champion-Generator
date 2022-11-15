@@ -1,3 +1,4 @@
+import time
 from data import csapatok
 from os import system
 filename = 'csapatok.csv'   
@@ -5,9 +6,8 @@ filename = 'csapatok.csv'
 def menu():
     system('cls')
     print('0 - Csapatnév megadása')
-    print('1 - Csapat mentése')
-    print('2 - Csapatok Listázás')
-    print('3 - Meccs lejátszása')
+    print('1 - Csapatok Listázás')
+    print('2 - Meccs lejátszása')
     print('4 - Kilépés')
     return input('Kérem válasszon: ')
 
@@ -33,3 +33,15 @@ def teamsList():
 
 def playMatch():
     pass
+
+def kilepes():
+    system('cls')
+    print('Kilépés.')
+    time.sleep(0.5)
+    system('cls')
+    print('Kilépés..')
+    time.sleep(0.5)
+    system('cls')
+    print('Kilépés...')
+    time.sleep(0.5)
+    system('cls')
