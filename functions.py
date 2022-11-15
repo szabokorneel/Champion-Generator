@@ -8,28 +8,36 @@ def menu():
     print('0 - Csapatnév megadása')
     print('1 - Csapatok Listázás')
     print('2 - Meccs lejátszása')
-    print('4 - Kilépés')
+    print('3 - Kilépés')
     return input('Kérem válasszon: ')
 
-
-def teams():
-    file = open(filename, 'r', encoding = 'utf-8' )
-    global cimsor
-    cimsor = file.readline() 
-    for row in file:
-        splitted = row.strip().split(';')
-        csapatok[splitted[0]] = int(splitted[1])
-
+   
 def addYourTeam():
-    pass
+    choice = False
+    while choice != True:
+        system('cls')
+        bekertNev = input(f'Adja meg a csapata nevét: ')
+        if bekertNev.capitalize() in csapatok:
+            system('cls')
+            print(f'Ez a csapat már létezik') 
+            time.sleep(1.5)
+        else: 
+            system('cls')
+            print('Csapata rögzítésre került')
+            csapatok.append(bekertNev.capitalize())
+            time.sleep(1.5)
+            choice = True
 
-
-def saveTeam():
-    pass
 
 
 def teamsList():
-    pass
+    system('cls')
+    print('A jelenlegi csapatok: ')
+    for i in range(len(csapatok)):
+        print('\t\t     ',csapatok[i])
+    time.sleep(3.5)
+
+
 
 def playMatch():
     pass
