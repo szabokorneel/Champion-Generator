@@ -5,8 +5,8 @@ from data import betoltes, mentes
 
 system('cls')
 print (f'Üdvözöljük a Champion Generator-ben!')
-
-print(f'A játék során 8 csapatból, verejtékes mérkőzések eredményeként csak 1 csapat maradhat: A BAJNOK CSAPAT.')
+print(f'A játék során 8 csapatból, verejtékes mérkőzések eredményeként csak 1 csapat maradhat: A bajnok csapat. Kezdéshez üssön Entert. ')
+input('')
 
 choice = ''
 while choice != '4':

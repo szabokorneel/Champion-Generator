@@ -1,7 +1,13 @@
 import time
+import random
 from data import csapatok
 from os import system
 filename = 'csapatok.csv'   
+jatszottak = 0
+kevert = []
+negyeddonto = []
+elodonto = []
+donto = []
 
 def menu():
     system('cls')
@@ -12,7 +18,6 @@ def menu():
     print('4 - Kilépés')
     return input('Kérem válasszon: ')
 
-   
 def addYourTeam():
     choice = False
     if len(csapatok) < 8:
@@ -65,7 +70,18 @@ def deleteYourTeam():
 
 
 def playMatch():
-    pass
+    if jatszottak < 1:
+        global kevert
+        global jatszottak
+        for i in range(len(csapatok)):
+            kevert.append(csapatok[i])
+        random.shuffle(kevert)
+        jatszottak += 1
+        for i in range(0,len(kevert), 2):
+            negyeddonto.append(kevert[i-1])
+            negyeddonto.append(kevert[i])
+        time.sleep(2)
+    
 
 def kilepes():
     system('cls')
