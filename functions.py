@@ -14,10 +14,10 @@ def menu():
     system('cls')
     print('0 - Csapatnév megadása')
     print('1 - Csapatok Listázás')
-    print('2 - Meccs lejátszása')
+    print('2 - Bajnokság lejátszása')
     print('3 - Saját csapat törlése')
-    print('4 - Kilépés')
-    print('5 - Visszaállítás')
+    print('4 - Visszaállítás')
+    print('5 - Kilépés')
     return input('Kérem válasszon: ')
 
 def addYourTeam():
@@ -69,7 +69,7 @@ def deleteYourTeam():
             print('Helytelen válasz')
             time.sleep(2)
 
-def playMatch():
+def playTournament():
     global kevert
     global nyertesek
     global jatszottak

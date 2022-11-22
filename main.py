@@ -19,16 +19,17 @@ while choice != '4':
         teamsList()
 
     elif choice == '2':
-        playMatch()
+        playTournament()
 
     elif choice == '3':
         deleteYourTeam()
 
     elif choice == '4':
-        kilepes()
+        reset()    
     
     elif choice == '5':
-        reset()    
+        kilepes()
+    
     else:
         system('cls')
         print('Hibás válasz')
