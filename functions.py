@@ -8,6 +8,7 @@ kevert = []
 negyeddonto = []
 elodonto = []
 donto = []
+nyertesek = []
 
 def menu():
     system('cls')
@@ -70,18 +71,35 @@ def deleteYourTeam():
 
 
 def playMatch():
+    global kevert
+    global nyertesek
+    global jatszottak
+    if not jatszottak < 1:
+        kevert.clear()
+        for nyertes in nyertesek:
+            kevert.append(nyertes)
     if jatszottak < 1:
-        global kevert
-        global jatszottak
         for i in range(len(csapatok)):
             kevert.append(csapatok[i])
         random.shuffle(kevert)
         jatszottak += 1
-        for i in range(0,len(kevert), 2):
-            negyeddonto.append(kevert[i-1])
-            negyeddonto.append(kevert[i])
-        time.sleep(2)
-    
+    for i in range(0,len(kevert)-1,2):
+        system('cls')
+        print(kevert[i])
+        print(kevert[i+1])
+        sorsolas = random.randint(0,1)
+        if sorsolas == 0:
+            print('A kiesett csapat: ',kevert[i])
+            kevert[i] = '###'
+        else:
+            print('A kiesett csapat: ',kevert[i+1])
+            kevert[i+1] = '###'
+        time.sleep(2.5)
+    nyertesek = []
+    for i,kever in enumerate(kevert):
+        if kever != "###":
+            nyertesek.append(kever)
+    input()
 
 def kilepes():
     system('cls')
