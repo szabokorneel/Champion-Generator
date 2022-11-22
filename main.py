@@ -26,6 +26,9 @@ while choice != '4':
 
     elif choice == '4':
         kilepes()
+    
+    elif choice == '5':
+        reset()    
     else:
         system('cls')
         print('Hibás válasz')

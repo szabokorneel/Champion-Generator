@@ -17,6 +17,7 @@ def menu():
     print('2 - Meccs lejátszása')
     print('3 - Saját csapat törlése')
     print('4 - Kilépés')
+    print('5 - Visszaállítás')
     return input('Kérem válasszon: ')
 
 def addYourTeam():
@@ -67,8 +68,6 @@ def deleteYourTeam():
         else:
             print('Helytelen válasz')
             time.sleep(2)
-            
-
 
 def playMatch():
     global kevert
@@ -79,6 +78,7 @@ def playMatch():
         for nyertes in nyertesek:
             kevert.append(nyertes)
     if jatszottak < 1:
+        kevert.clear
         for i in range(len(csapatok)):
             kevert.append(csapatok[i])
         random.shuffle(kevert)
@@ -94,12 +94,17 @@ def playMatch():
         else:
             print('A kiesett csapat: ',kevert[i+1])
             kevert[i+1] = '###'
-        time.sleep(2.5)
+        time.sleep(3)
     nyertesek = []
     for i,kever in enumerate(kevert):
         if kever != "###":
             nyertesek.append(kever)
-    input()
+    if len(kevert) == 1:
+        system('cls')
+        print(f'A BAJNOK CSAPAT: {kevert[0]}!')
+        time.sleep(3)
+    
+     
 
 def kilepes():
     system('cls')
@@ -112,3 +117,10 @@ def kilepes():
     print('Kilépés...')
     time.sleep(0.5)
     system('cls')
+
+def reset():
+    system('cls')
+    global jatszottak
+    jatszottak = 0
+    print('Sikeres visszaállítás')
+    time.sleep(4)
