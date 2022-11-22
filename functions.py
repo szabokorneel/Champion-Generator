@@ -2,6 +2,10 @@ import time
 import random
 from data import csapatok
 from os import system
+
+boldStart = '\033[1;3m'
+boldEnd = '\033[0m'
+
 filename = 'csapatok.csv'   
 jatszottak = 0
 kevert = []
@@ -101,7 +105,7 @@ def playTournament():
             nyertesek.append(kever)
     if len(kevert) == 1:
         system('cls')
-        print(f'A BAJNOK CSAPAT: {kevert[0]}!')
+        print(f'{boldStart}A BAJNOK CSAPAT: {kevert[0]}!{boldEnd}')
         time.sleep(3)
     
      

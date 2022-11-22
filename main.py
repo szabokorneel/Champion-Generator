@@ -9,7 +9,7 @@ print(f'A játék során 8 csapatból, verejtékes mérkőzések eredményeként
 input('')
 
 choice = ''
-while choice != '4':
+while choice != '5':
     betoltes()
     choice = menu()
     if choice == '0':
