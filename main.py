@@ -6,11 +6,12 @@ from data import betoltes, mentes
 system('cls')
 print (f'Üdvözöljük a Champion Generator-ben!')
 print(f'A játék során 8 csapatból, verejtékes mérkőzések eredményeként csak 1 csapat maradhat: A bajnok csapat. Kezdéshez üssön Entert. ')
-input('')
+input()
 
 choice = ''
 while choice != '5':
     betoltes()
+    
     choice = menu()
     if choice == '0':
         addYourTeam()

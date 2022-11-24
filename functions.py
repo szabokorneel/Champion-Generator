@@ -14,8 +14,15 @@ elodonto = []
 donto = []
 nyertesek = []
 
+def Instrukcio():
+    if jatszottak > 0:
+        print('A fordulók lejátszásához fordulónként üssön 2-est!\n')
+    elif jatszottak > 3:
+        print()
+
 def menu():
     system('cls')
+    Instrukcio()
     print('0 - Csapatnév megadása')
     print('1 - Csapatok Listázás')
     print('2 - Bajnokság lejátszása')
@@ -41,14 +48,14 @@ def addYourTeam():
                 time.sleep(1.5)
                 choice = True
     else:
-        print('Maximum egy csapat adható hozzá')
+        print('Maximum egy csapat adható hozzá!')
         time.sleep(3)
 
 def teamsList():
     system('cls')
     print('A jelenlegi csapatok: ')
     for i in range(len(csapatok)):
-        print('\t\t     ',csapatok[i])
+        print('\t\t    ',csapatok[i])
     time.sleep(3.5)
 
 
