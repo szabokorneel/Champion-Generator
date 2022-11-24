@@ -36,7 +36,7 @@ def addYourTeam():
     if len(csapatok) < 8:
         while choice != True:
             system('cls')
-            bekertNev = input(f'Adja meg a csapata nevét: ')
+            bekertNev = input(f'Adja meg saját csapata nevét: ')
             if bekertNev.capitalize() in csapatok:
                 system('cls')
                 print(f'Ez a csapat már létezik') 
